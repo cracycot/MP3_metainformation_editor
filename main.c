@@ -47,7 +47,7 @@ int str_check(char * x, char * x2) {
 
 
 void write_in_file() {
-    FILE *file = fopen("/Users/kirilllesniak/Downloads/sonne-3.mp3", "r+");
+    FILE *file = fopen("your_file_path", "r+");
     union Metadata a;
     int s = fread(a.bytes, sizeof(char), 10, file);
     if (s  == 0) {
@@ -56,7 +56,7 @@ void write_in_file() {
 
 }
 int main(int argc, char **argv) {
-    FILE *file = fopen("/Users/kirilllesniak/Downloads/in2.mp3", "r+");
+    FILE *file = fopen("your_file_path", "r+");
     if (file == NULL) {
         perror("Ошибка создания файла!");
         return 1;
